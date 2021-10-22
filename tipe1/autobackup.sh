@@ -16,7 +16,7 @@ email=$(cat /home/email)
 if [[ "$email" = "" ]]; then
 echo "Please enter your email"
 read -rp "Email: " -e email
-cat <<EOF>>/home/email
+cat << EOF >> /home/email
 $email
 EOF
 fi

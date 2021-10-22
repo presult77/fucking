@@ -103,7 +103,7 @@ port_tls $tls
 port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
-echo -e "This Your SHADOWSOCKS Account Detail:"
+echo -e "This is Your SHADOWSOCKS Account Detail:"
 echo -e ""
 echo -e "Hostname       : ${domain}"
 echo -e "Port OBFS TLS  : $tls"

@@ -22,7 +22,7 @@ systemctl restart trojan
 trojanlink="trojan://${user}@${domain}:${tr}"
 trojanlink2="trojan://${user}@${domain2}:${tryt}"
 clear
-echo -e "This Your TROJAN Account Detail:"
+echo -e "This is Your TROJAN Account Detail:"
 echo -e ""
 echo -e "Host/IP        : ${domain}"
 echo -e "Port           : ${tr}"

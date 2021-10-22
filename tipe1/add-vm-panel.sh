@@ -58,8 +58,10 @@ vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-none.json)"
 systemctl restart v2ray
 systemctl restart v2ray@none
 service cron restart
+rm -f "/etc/v2ray/$user-tls.json"
+rm -f "/etc/v2ray/$user-none.json"
 clear
-echo -e "This Your VMESS Account Detail:"
+echo -e "This is Your VMESS Account Detail:"
 echo -e ""
 echo -e "Username       : ${user}"
 echo -e "Hostname       : ${domain}"

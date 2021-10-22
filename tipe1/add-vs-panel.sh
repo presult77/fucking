@@ -28,7 +28,7 @@ vlesslink4="vless://${uuid}@${domain2}:$noneyt?path=/v2ray&encryption=none&type=
 systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
-echo -e "This Your VLESS Account Detail:"
+echo -e "This is Your VLESS Account Detail:"
 echo -e ""
 echo -e "Username       : ${user}"
 echo -e "Hostname       : ${domain}"

@@ -2,6 +2,7 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+#ShadowSocks
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
@@ -20,6 +21,7 @@ rm -f "/etc/shadowsocks-libev/$user-tls.json"
 rm -f "/etc/shadowsocks-libev/$user-http.json"
 fi
 done
+#Trojan
 data=( `cat /etc/trojan/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
@@ -34,6 +36,7 @@ sed -i '/^,"'"$user"'"$/d' /etc/trojan/config.json
 fi
 done
 systemctl restart trojan
+#Vmess
 data=( `cat /etc/v2ray/config.json | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
@@ -50,6 +53,7 @@ fi
 done
 systemctl restart v2ray
 systemctl restart v2ray@none
+#Vless
 data=( `cat /etc/v2ray/vless.json | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"

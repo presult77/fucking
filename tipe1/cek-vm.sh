@@ -1,7 +1,16 @@
 #!/bin/bash
+rm /var/log/v2ray/access.log
+rm /var/log/v2ray/error.log
+systemctl restart v2ray
+systemctl restart v2ray@none
+sleep 20
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+ipp=$(cat /var/log/v2ray/access.log | grep email | awk '{print $3}' | cut -d: -f1 | tr -d 'tcp' | sort | uniq)
+cat > /root/ip.txt <<-END
+$ipp
+END
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/v2ray/config.json | grep '^###' | cut -d ' ' -f 2`);
@@ -14,7 +23,7 @@ if [[ -z "$akun" ]]; then
 akun="tidakada"
 fi
 echo -n > /tmp/ipvmess.txt
-data2=( `netstat -anp | grep ESTABLISHED | grep tcp6 | grep v2ray | awk '{print $5}' | cut -d: -f1 | sort | uniq`);
+data2=( `cat /root/ip.txt`);
 for ip in "${data2[@]}"
 do
 jum=$(cat /var/log/v2ray/access.log | grep -w $akun | awk '{print $3}' | cut -d: -f1 | grep -w $ip | sort | uniq)
@@ -42,3 +51,4 @@ echo "other";
 echo "$oth";
 echo "-------------------------------"
 rm -rf /tmp/other.txt
+rm /root/ip.txt

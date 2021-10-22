@@ -582,9 +582,9 @@ cd /usr/bin
 wget -O add-vm-panel "https://script.redssh.net/add-vm-panel.sh"
 wget -O add-vs-panel "https://script.redssh.net/add-vs-panel.sh"
 wget -O add-tr-panel "https://script.redssh.net/add-tr-panel.sh"
-wget -O del-vm "https://script.redssh.net/del-vm.sh"
-wget -O del-vs "https://script.redssh.net/del-vs.sh"
-wget -O del-tr "https://script.redssh.net/del-tr.sh"
+wget -O del-vm-panel "https://script.redssh.net/del-vm-panel.sh"
+wget -O del-vs-panel "https://script.redssh.net/del-vs-panel.sh"
+wget -O del-tr-panel "https://script.redssh.net/del-tr-panel.sh"
 wget -O cek-ws "https://script.redssh.net/cek-vm.sh"
 wget -O cek-vs "https://script.redssh.net/cek-vs.sh"
 wget -O cek-tr "https://script.redssh.net/cek-tr.sh"
@@ -597,9 +597,9 @@ wget -O ram "https://script.redssh.net/ram.sh"
 chmod +x add-vm-panel
 chmod +x add-vs-panel
 chmod +x add-tr-panel
-chmod +x del-vm
-chmod +x del-vs
-chmod +x del-tr
+chmod +x del-vm-panel
+chmod +x del-vs-panel
+chmod +x del-tr-panel
 chmod +x cek-ws
 chmod +x cek-vless
 chmod +x cek-tr
@@ -628,7 +628,6 @@ echo "Install Paket..."
 apt-get install --no-install-recommends build-essential autoconf libtool libssl-dev libpcre3-dev libev-dev asciidoc xmlto automake -y
 echo "Install Paket Selesai."
 echo "#############################################"
-
 
 #Install_Shadowsocks_libev
 echo "#############################################"
@@ -707,11 +706,11 @@ iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
 wget -O add-ss-panel "https://script.redssh.net/add-ss-panel.sh"
-wget -O del-ss "https://script.redssh.net/del-ss.sh"
+wget -O del-ss-panel "https://script.redssh.net/del-ss-panel.sh"
 wget -O cek-ss "https://script.redssh.net/cek-ss.sh"
 wget -O renew-ss-panel "https://script.redssh.net/renew-ss-panel.sh"
 chmod +x add-ss-panel
-chmod +x del-ss
+chmod +x del-ss-panel
 chmod +x cek-ss
 chmod +x renew-ss-panel
 cd
@@ -727,7 +726,7 @@ cd
 rm -rf wondershaper
 echo > /home/limit
 apt install msmtp-mta ca-certificates bsd-mailx -y
-cat<<EOF>>/etc/msmtprc
+cat << EOF > /etc/msmtprc
 defaults
 tls on
 tls_starttls on
@@ -741,7 +740,9 @@ user ridhodata01@gmail.com
 from ridhodata01@gmail.com
 password peciajaib752
 logfile ~/.msmtp.log
+
 EOF
+
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
 wget -O autobackup "https://script.redssh.net/autobackup.sh"
