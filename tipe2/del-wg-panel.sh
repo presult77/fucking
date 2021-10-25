@@ -8,8 +8,8 @@ CLIENT_EXISTS=$(grep -w $username /etc/wireguard/wg0.conf | wc -l)
 if [[ ${CLIENT_EXISTS} == '0' ]]; then
 exit 1
 fi
-user=$(grep -E "^### " "/etc/wireguard/wg0.conf" | cut -d ' ' -f 2 | egrep -w "$username")
-data=$(grep -E "^### " "/etc/wireguard/wg0.conf" | cut -d ' ' -f 2-3 | egrep -w "$username")
+user=$(grep -E "^### Client" "/etc/wireguard/wg0.conf" | cut -d ' ' -f 3 | egrep -w "$username")
+data=$(grep -E "^### Client" "/etc/wireguard/wg0.conf" | cut -d ' ' -f 3-4 | egrep -w "$username")
 cat > /root/wg.txt <<-END
 $data
 END

@@ -6,7 +6,6 @@ domain=sg1-wg.redssh.net
 clear
 # Load params
 source /etc/wireguard/params
-source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 SERVER_PUB_IP=$(wget -qO- icanhazip.com);
 else
@@ -65,9 +64,10 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	systemctl restart "wg-quick@$SERVER_WG_NIC"
 	cp $HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf /home/vps/public_html/$CLIENT_NAME.conf
 	clear
-echo -e "This Your WIREGUARD Account Detail:"
+echo -e "This is Your WIREGUARD Account Detail:"
 echo -e ""
 echo -e "Hostname       : $domain"
+echo -e "Port	        : 443, 80"
 echo -e "Username       : $CLIENT_NAME"
 echo -e "Active Days    : $masaaktif Days"
 echo -e "Expired On     : $exp"
