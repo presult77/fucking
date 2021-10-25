@@ -38,7 +38,7 @@ ssr_link="ssr://${tmp2}"
 /etc/init.d/ssrmu restart &>/dev/null
 service cron restart
 clear
-echo -e "This Your SSR Account Detail:"
+echo -e "This is Your SSR Account Detail:"
 echo -e ""
 echo -e "Hostname      : ${domain}"
 echo -e "Port          : ${ssr_port}"

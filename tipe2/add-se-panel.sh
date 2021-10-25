@@ -12,7 +12,7 @@ clear
 se-add &>/dev/null <<<$(printf "$user\n$pass\n$masa")
 tgl=`date -d "$masa days" +"%Y-%m-%d"`
 clear
-echo -e "This Your VPN Account Detail:"
+echo -e "This is Your VPN Account Detail:"
 echo -e ""
 echo -e "Hostname : $domain"
 echo -e "Username : $user"

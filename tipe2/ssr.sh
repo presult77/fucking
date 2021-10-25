@@ -140,7 +140,7 @@ Start_SSR
 Install_SSR
 wget -O /usr/bin/ssr https://script.redssh.net/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr-panel https://script.redssh.net/add-ssr-panel.sh && chmod +x /usr/bin/add-ssr-panel
-wget -O /usr/bin/del-ssr https://script.redssh.net/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/del-ssr-panel https://script.redssh.net/del-ssr-panel.sh && chmod +x /usr/bin/del-ssr-panel
 wget -O /usr/bin/renew-ssr-panel https://script.redssh.net/renew-ssr-panel.sh && chmod +x /usr/bin/renew-ssr-panel
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
