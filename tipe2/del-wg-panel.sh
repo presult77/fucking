@@ -20,7 +20,7 @@ sed -i "/^### Client $user $exp/,/^AllowedIPs/d" /etc/wireguard/wg0.conf
 rm -f "/home/vps/public_html/$user.conf"
 
 # restart wireguard to apply changes
-systemctl restart "wg-quick@$SERVER_WG_NIC"
+systemctl restart "wg-quick@wg0"
 service cron restart
 clear
 echo " Wireguard Account Deleted Successfully"
