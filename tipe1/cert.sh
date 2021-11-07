@@ -5,7 +5,6 @@ NC='\e[0m'
 clear
 echo start
 sleep 0.5
-source /var/lib/premium-script/ipvps.conf
 domain=$(cat /etc/v2ray/domain)
 systemctl stop v2ray
 systemctl stop v2ray@none
