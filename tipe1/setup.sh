@@ -585,6 +585,9 @@ wget -O add-tr-panel "https://script.redssh.net/add-tr-panel.sh"
 wget -O del-vm-panel "https://script.redssh.net/del-vm-panel.sh"
 wget -O del-vs-panel "https://script.redssh.net/del-vs-panel.sh"
 wget -O del-tr-panel "https://script.redssh.net/del-tr-panel.sh"
+wget -O trial-vm-panel "https://script.redssh.net/trial-vm-panel.sh"
+wget -O trial-vs-panel "https://script.redssh.net/trial-vs-panel.sh"
+wget -O trial-tr-panel "https://script.redssh.net/trial-tr-panel.sh"
 wget -O cek-ws "https://script.redssh.net/cek-vm.sh"
 wget -O cek-vs "https://script.redssh.net/cek-vs.sh"
 wget -O cek-tr "https://script.redssh.net/cek-tr.sh"
@@ -597,6 +600,9 @@ wget -O ram "https://script.redssh.net/ram.sh"
 chmod +x add-vm-panel
 chmod +x add-vs-panel
 chmod +x add-tr-panel
+chmod +x trial-vm-panel
+chmod +x trial-vs-panel
+chmod +x trial-tr-panel
 chmod +x del-vm-panel
 chmod +x del-vs-panel
 chmod +x del-tr-panel
