@@ -588,9 +588,16 @@ wget -O add-tr-res "https://script.redssh.net/add-tr-res.sh"
 wget -O del-vm-panel "https://script.redssh.net/del-vm-panel.sh"
 wget -O del-vs-panel "https://script.redssh.net/del-vs-panel.sh"
 wget -O del-tr-panel "https://script.redssh.net/del-tr-panel.sh"
+wget -O del-vm "https://script.redssh.net/del-vm.sh"
+wget -O del-vs "https://script.redssh.net/del-vs.sh"
+wget -O del-tr "https://script.redssh.net/del-tr.sh"
+wget -O del-ss "https://script.redssh.net/del-ss.sh"
 wget -O trial-vm-panel "https://script.redssh.net/trial-vm-panel.sh"
 wget -O trial-vs-panel "https://script.redssh.net/trial-vs-panel.sh"
 wget -O trial-tr-panel "https://script.redssh.net/trial-tr-panel.sh"
+wget -O trial-vm-res "https://script.redssh.net/trial-vm-res.sh"
+wget -O trial-vs-res "https://script.redssh.net/trial-vs-res.sh"
+wget -O trial-tr-res "https://script.redssh.net/trial-tr-res.sh"
 wget -O cek-ws "https://script.redssh.net/cek-vm.sh"
 wget -O cek-vs "https://script.redssh.net/cek-vs.sh"
 wget -O cek-tr "https://script.redssh.net/cek-tr.sh"
@@ -609,9 +616,16 @@ chmod +x add-tr-res
 chmod +x trial-vm-panel
 chmod +x trial-vs-panel
 chmod +x trial-tr-panel
+chmod +x trial-vm-res
+chmod +x trial-vs-res
+chmod +x trial-tr-res
 chmod +x del-vm-panel
 chmod +x del-vs-panel
 chmod +x del-tr-panel
+chmod +x del-vm
+chmod +x del-vs
+chmod +x del-tr
+chmod +x del-ss
 chmod +x cek-ws
 chmod +x cek-vless
 chmod +x cek-tr
