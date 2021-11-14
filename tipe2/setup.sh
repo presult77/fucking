@@ -180,6 +180,9 @@ cd /usr/bin
 wget -O about "https://script.redssh.net/about.sh"
 wget -O menu "https://script.redssh.net/menu.sh"
 wget -O add-ssh-panel "https://script.redssh.net/add-ssh-panel.sh"
+wget -O trial-ssh-panel "https://script.redssh.net/trial-ssh-panel.sh"
+wget -O add-ssh-res "https://script.redssh.net/add-ssh-res.sh"
+wget -O trial-ssh-res "https://script.redssh.net/trial-ssh-res.sh"
 wget -O hapus "https://script.redssh.net/hapus.sh"
 wget -O member "https://script.redssh.net/member.sh"
 wget -O delete "https://script.redssh.net/delete.sh"
@@ -208,6 +211,9 @@ wget -O se-addport "https://script.redssh.net/se-addport"
 wget -O se-cek "https://script.redssh.net/se-cek"
 wget -O se-del "https://script.redssh.net/se-del"
 wget -O add-se-panel "https://script.redssh.net/add-se-panel.sh"
+wget -O trial-se-panel "https://script.redssh.net/trial-se-panel.sh"
+wget -O add-se-res "https://script.redssh.net/add-se-res.sh"
+wget -O trial-se-res "https://script.redssh.net/trial-se-res.sh"
 chmod +x se-add
 chmod +x se-delport
 chmod +x se-maxlogin
@@ -223,6 +229,9 @@ chmod +x se-cek
 chmod +x se-del
 chmod +x menu
 chmod +x add-ssh-panel
+chmod +x add-ssh-res
+chmod +x trial-ssh-panel
+chmod +x trial-ssh-res
 chmod +x hapus
 chmod +x member
 chmod +x delete
@@ -239,6 +248,9 @@ chmod +x wbmn
 chmod +x xp
 chmod +x limit-bad
 chmod +x add-se-panel
+chmod +x add-se-res
+chmod +x trial-se-panel
+chmod +x trial-se-res
 
 # add cron
 cd
@@ -277,5 +289,3 @@ cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 cd
-
-

@@ -90,9 +90,16 @@ WG_RUNNING=$?
 # Tambahan
 cd /usr/bin
 wget -O add-wg-panel "https://script.redssh.net/add-wg-panel.sh"
+wget -O trial-wg-panel "https://script.redssh.net/trial-wg-panel.sh"
+wget -O add-wg-res "https://script.redssh.net/add-wg-res.sh"
+wget -O trial-wg-res "https://script.redssh.net/trial-wg-res.sh"
 wget -O del-wg-panel "https://script.redssh.net/del-wg-panel.sh"
+wget -O del-wg "https://script.redssh.net/del-wg.sh"
 wget -O renew-wg-panel "https://script.redssh.net/renew-wg-panel.sh"
 chmod +x add-wg-panel
+chmod +x trial-wg-panel
+chmod +x add-wg-res
+chmod +x trial-wg-res
 chmod +x del-wg-panel
 chmod +x renew-wg-panel
 cd
