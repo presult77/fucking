@@ -229,8 +229,8 @@ chmod +x se-cek
 chmod +x se-del
 chmod +x menu
 chmod +x add-ssh-panel
-chmod +x add-ssh-res
 chmod +x trial-ssh-panel
+chmod +x add-ssh-res
 chmod +x trial-ssh-res
 chmod +x hapus
 chmod +x member
@@ -248,8 +248,8 @@ chmod +x wbmn
 chmod +x xp
 chmod +x limit-bad
 chmod +x add-se-panel
-chmod +x add-se-res
 chmod +x trial-se-panel
+chmod +x add-se-res
 chmod +x trial-se-res
 
 # add cron
