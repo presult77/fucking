@@ -3,8 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-domain=sg2-ss.redssh.net
-masaaktif=1
+domain=sg1-ss.fastvpn.host
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
@@ -26,6 +25,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
+read -p "Expired (hari): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 cat > /etc/shadowsocks-libev/$user-tls.json<<END
 {   
@@ -103,13 +103,15 @@ port_tls $tls
 port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
-echo -e "This is Your SHADOWSOCKS Trial Account Detail:"
+echo -e "This is Your SHADOWSOCKS Account Detail:"
 echo -e ""
 echo -e "Hostname       : ${domain}"
 echo -e "Port OBFS TLS  : $tls"
 echo -e "Port OBFS HTTP : $http"
 echo -e "Password       : $user"
 echo -e "Method         : aes-256-cfb"
+echo -e "Active Days    : $masaaktif Days"
+echo -e "Expired On     : $exp"
 echo -e "==========================="
 echo -e "Link OBFS TLS  : $linkss1"
 echo -e "==========================="

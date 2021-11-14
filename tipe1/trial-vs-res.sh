@@ -3,7 +3,8 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-domain=sg1-vs.redssh.net
+domain=sg1-vs.fastvpn.host
+masaaktif=1
 tls=443
 none=80
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -15,7 +16,6 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		fi
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
-read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vless.json
@@ -23,15 +23,15 @@ sed -i '/#none$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vnone.json
 vlesslink1="vless://${uuid}@${domain}:$tls?path=/v2ray&security=tls&encryption=none&type=ws#${user}"
 vlesslink2="vless://${uuid}@${domain}:$none?path=/v2ray&encryption=none&type=ws#${user}"
+vlesslink3="vless://${uuid}@${domain2}:$tlsyt?path=/v2ray&security=tls&encryption=none&type=ws#${user}"
+vlesslink4="vless://${uuid}@${domain2}:$noneyt?path=/v2ray&encryption=none&type=ws#${user}"
 systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
-echo -e "This is Your VLESS Account Detail:"
+echo -e "This is Your VLESS Trial Account Detail:"
 echo -e ""
 echo -e "Username       : ${user}"
 echo -e "Hostname       : ${domain}"
-echo -e "Active Days    : $masaaktif Days"
-echo -e "Expired On     : $exp"
 echo -e "Port TLS       : ${tls}"
 echo -e "Port Non TLS   : ${none}"
 echo -e "Uuid           : ${uuid}"

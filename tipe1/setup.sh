@@ -712,10 +712,12 @@ iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
 wget -O add-ss-panel "https://script.redssh.net/add-ss-panel.sh"
+wget -O trial-ss-panel "https://script.redssh.net/trial-ss-panel.sh"
 wget -O del-ss-panel "https://script.redssh.net/del-ss-panel.sh"
 wget -O cek-ss "https://script.redssh.net/cek-ss.sh"
 wget -O renew-ss-panel "https://script.redssh.net/renew-ss-panel.sh"
 chmod +x add-ss-panel
+chmod +x trial-ss-panel
 chmod +x del-ss-panel
 chmod +x cek-ss
 chmod +x renew-ss-panel
