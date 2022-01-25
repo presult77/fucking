@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-domain=sg1-vs.redssh.net
+domain=sg1-vs.naravpn.com
 masaaktif=1
 tls=443
 none=80

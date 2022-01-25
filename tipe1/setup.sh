@@ -1,5 +1,5 @@
 #!/bin/bash
-domain=sgcore01.redssh.net
+domain=$(hostname)
 # go to root
 cd
 echo 1 > /proc/sys/net/ipv4/ip_forward
@@ -129,7 +129,7 @@ cat> /etc/v2ray/config.json << END
         "clients": [
           {
             "id": "${uuid}",
-            "alterId": 2
+            "alterId": 0
 #tls
           }
         ]
@@ -226,7 +226,7 @@ cat> /etc/v2ray/none.json << END
         "clients": [
           {
             "id": "${uuid}",
-            "alterId": 2
+            "alterId": 0
 #none
           }
         ]
