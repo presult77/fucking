@@ -63,7 +63,7 @@ echo "neofetch" >> .profile
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://script.redssh.net/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 nohup /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500 &
 
@@ -104,7 +104,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://script.redssh.net/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/presult77/fucking/main/tipe1/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -579,34 +579,34 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-vm-panel "https://script.redssh.net/add-vm-panel.sh"
-wget -O add-vs-panel "https://script.redssh.net/add-vs-panel.sh"
-wget -O add-tr-panel "https://script.redssh.net/add-tr-panel.sh"
-wget -O add-vm-res "https://script.redssh.net/add-vm-res.sh"
-wget -O add-vs-res "https://script.redssh.net/add-vs-res.sh"
-wget -O add-tr-res "https://script.redssh.net/add-tr-res.sh"
-wget -O del-vm-panel "https://script.redssh.net/del-vm-panel.sh"
-wget -O del-vs-panel "https://script.redssh.net/del-vs-panel.sh"
-wget -O del-tr-panel "https://script.redssh.net/del-tr-panel.sh"
-wget -O del-vm "https://script.redssh.net/del-vm.sh"
-wget -O del-vs "https://script.redssh.net/del-vs.sh"
-wget -O del-tr "https://script.redssh.net/del-tr.sh"
-wget -O del-ss "https://script.redssh.net/del-ss.sh"
-wget -O trial-vm-panel "https://script.redssh.net/trial-vm-panel.sh"
-wget -O trial-vs-panel "https://script.redssh.net/trial-vs-panel.sh"
-wget -O trial-tr-panel "https://script.redssh.net/trial-tr-panel.sh"
-wget -O trial-vm-res "https://script.redssh.net/trial-vm-res.sh"
-wget -O trial-vs-res "https://script.redssh.net/trial-vs-res.sh"
-wget -O trial-tr-res "https://script.redssh.net/trial-tr-res.sh"
-wget -O cek-ws "https://script.redssh.net/cek-vm.sh"
-wget -O cek-vs "https://script.redssh.net/cek-vs.sh"
-wget -O cek-tr "https://script.redssh.net/cek-tr.sh"
-wget -O renew-vm-panel "https://script.redssh.net/renew-vm-panel.sh"
-wget -O renew-vs-panel "https://script.redssh.net/renew-vs-panel.sh"
-wget -O renew-tr-panel "https://script.redssh.net/renew-tr-panel.sh"
-wget -O certv2ray "https://script.redssh.net/cert.sh"
-wget -O xp "https://script.redssh.net/xp.sh"
-wget -O ram "https://script.redssh.net/ram.sh"
+wget -O add-vm-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-vm-panel.sh"
+wget -O add-vs-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-vs-panel.sh"
+wget -O add-tr-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-tr-panel.sh"
+wget -O add-vm-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-vm-res.sh"
+wget -O add-vs-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-vs-res.sh"
+wget -O add-tr-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-tr-res.sh"
+wget -O del-vm-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-vm-panel.sh"
+wget -O del-vs-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-vs-panel.sh"
+wget -O del-tr-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-tr-panel.sh"
+wget -O del-vm "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-vm.sh"
+wget -O del-vs "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-vs.sh"
+wget -O del-tr "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-tr.sh"
+wget -O del-ss "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-ss.sh"
+wget -O trial-vm-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-vm-panel.sh"
+wget -O trial-vs-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-vs-panel.sh"
+wget -O trial-tr-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-tr-panel.sh"
+wget -O trial-vm-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-vm-res.sh"
+wget -O trial-vs-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-vs-res.sh"
+wget -O trial-tr-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-tr-res.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/cek-vm.sh"
+wget -O cek-vs "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/cek-vs.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/cek-tr.sh"
+wget -O renew-vm-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/renew-vm-panel.sh"
+wget -O renew-vs-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/renew-vs-panel.sh"
+wget -O renew-tr-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/renew-tr-panel.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/cert.sh"
+wget -O xp "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/xp.sh"
+wget -O ram "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/ram.sh"
 chmod +x add-vm-panel
 chmod +x add-vs-panel
 chmod +x add-tr-panel
@@ -731,14 +731,14 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O add-ss-panel "https://script.redssh.net/add-ss-panel.sh"
-wget -O trial-ss-panel "https://script.redssh.net/trial-ss-panel.sh"
-wget -O add-ss-res "https://script.redssh.net/add-ss-res.sh"
-wget -O trial-ss-res "https://script.redssh.net/trial-ss-res.sh"
-wget -O del-ss-panel "https://script.redssh.net/del-ss-panel.sh"
-wget -O cek-ss "https://script.redssh.net/cek-ss.sh"
-wget -O del-ss "https://script.redssh.net/del-ss.sh"
-wget -O renew-ss-panel "https://script.redssh.net/renew-ss-panel.sh"
+wget -O add-ss-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-ss-panel.sh"
+wget -O trial-ss-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-ss-panel.sh"
+wget -O add-ss-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/add-ss-res.sh"
+wget -O trial-ss-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/trial-ss-res.sh"
+wget -O del-ss-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-ss-panel.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/cek-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/del-ss.sh"
+wget -O renew-ss-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/renew-ss-panel.sh"
 chmod +x add-ss-panel
 chmod +x trial-ss-panel
 chmod +x add-ss-res
@@ -752,7 +752,7 @@ cd
 #intall-tools
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://script.redssh.net/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -779,11 +779,11 @@ EOF
 
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://script.redssh.net/autobackup.sh"
-wget -O backup "https://script.redssh.net/backup.sh"
-wget -O bckp "https://script.redssh.net/bckp.sh"
-wget -O restore "https://script.redssh.net/restore.sh"
-wget -O strt "https://script.redssh.net/strt.sh"
+wget -O autobackup "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/presult77/fucking/main/tipe1/strt.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
