@@ -790,3 +790,4 @@ chmod +x bckp
 chmod +x restore
 chmod +x strt
 cd
+clear
