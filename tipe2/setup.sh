@@ -2,6 +2,19 @@
 # By Horasss
 #
 # ==================================================
+read -p "Set The SSH Domain: " -e host
+hostnamectl set-hostname "$host"
+echo $host > /root/domainssh
+read -p "Set The SSH Res Domain: " -e hostsshres
+echo $hostsshres > /root/domainsshres
+read -p "Set The WG Domain: " -e hostwg
+echo $hostwg > /root/domainwg
+read -p "Set The WG  Res Domain: " -e hostwgres
+echo $hostwgres > /root/domainwgres
+read -p "Set The SSR Domain: " -e hostssr
+echo $hostssr > /root/domainssr
+read -p "Set The SSR Res Domain: " -e hostssrres
+echo $hostssrres > /root/domainssrres
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -21,7 +34,7 @@ commonname=www.redssh.net
 email=admin@redssh.net
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://script.redssh.net/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -90,14 +103,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://script.redssh.net/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://script.redssh.net/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://script.redssh.net/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 nohup /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500 &
 
@@ -116,7 +129,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://script.redssh.net/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -171,49 +184,49 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 # banner /etc/issue.net
 cd
-wget -O /etc/issue.net "https://gitlab.com/presult77/autoscript/-/raw/master/redssh.net"
+wget -O /etc/issue.net "https://github.com/presult77/fucking/raw/main/tipe2/naravpn.com"
 chmod +x /etc/issue.net
 echo "DROPBEAR_BANNER="/etc/issue.net"" >> /etc/default/dropbear
 
 # download script
 cd /usr/bin
-wget -O about "https://script.redssh.net/about.sh"
-wget -O menu "https://script.redssh.net/menu.sh"
-wget -O add-ssh-panel "https://script.redssh.net/add-ssh-panel.sh"
-wget -O trial-ssh-panel "https://script.redssh.net/trial-ssh-panel.sh"
-wget -O add-ssh-res "https://script.redssh.net/add-ssh-res.sh"
-wget -O trial-ssh-res "https://script.redssh.net/trial-ssh-res.sh"
-wget -O hapus "https://script.redssh.net/hapus.sh"
-wget -O member "https://script.redssh.net/member.sh"
-wget -O delete "https://script.redssh.net/delete.sh"
-wget -O cek "https://script.redssh.net/cek.sh"
-wget -O restart "https://script.redssh.net/restart.sh"
-wget -O speedtest "https://script.redssh.net/speedtest_cli.py"
-wget -O info "https://script.redssh.net/info.sh"
-wget -O ram "https://script.redssh.net/ram.sh"
-wget -O autokill "https://script.redssh.net/autokill.sh"
-wget -O ceklim "https://script.redssh.net/ceklim.sh"
-wget -O tendang "https://script.redssh.net/tendang.sh"
-wget -O wbmn "https://script.redssh.net/webmin.sh"
-wget -O xp "https://script.redssh.net/xp.sh"
-wget -O limit-bad "https://script.redssh.net/limit-bad.sh"
-wget -O se-add "https://script.redssh.net/se-add"
-wget -O se-delport "https://script.redssh.net/se-delport"
-wget -O se-maxlogin "https://script.redssh.net/se-maxlogin"
-wget -O se-menu "https://script.redssh.net/se-menu"
-wget -O se-ovpnport "https://script.redssh.net/se-ovpnport"
-wget -O se-pass "https://script.redssh.net/se-pass"
-wget -O se-speed "https://script.redssh.net/se-speed"
-wget -O se-status "https://script.redssh.net/se-status"
-wget -O se-trial "https://script.redssh.net/se-trial"
-wget -O se-trial "https://script.redssh.net/se-trialdel"
-wget -O se-addport "https://script.redssh.net/se-addport"
-wget -O se-cek "https://script.redssh.net/se-cek"
-wget -O se-del "https://script.redssh.net/se-del"
-wget -O add-se-panel "https://script.redssh.net/add-se-panel.sh"
-wget -O trial-se-panel "https://script.redssh.net/trial-se-panel.sh"
-wget -O add-se-res "https://script.redssh.net/add-se-res.sh"
-wget -O trial-se-res "https://script.redssh.net/trial-se-res.sh"
+wget -O about "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/about.sh"
+wget -O menu "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/menu.sh"
+wget -O add-ssh-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/add-ssh-panel.sh"
+wget -O trial-ssh-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/trial-ssh-panel.sh"
+wget -O add-ssh-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/add-ssh-res.sh"
+wget -O trial-ssh-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/trial-ssh-res.sh"
+wget -O hapus "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/member.sh"
+wget -O delete "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/info.sh"
+wget -O ram "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/ram.sh"
+wget -O autokill "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/tendang.sh"
+wget -O wbmn "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/xp.sh"
+wget -O limit-bad "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/limit-bad.sh"
+wget -O se-add "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-add"
+wget -O se-delport "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-delport"
+wget -O se-maxlogin "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-maxlogin"
+wget -O se-menu "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-menu"
+wget -O se-ovpnport "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-ovpnport"
+wget -O se-pass "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-pass"
+wget -O se-speed "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-speed"
+wget -O se-status "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-status"
+wget -O se-trial "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-trial"
+wget -O se-trial "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-trialdel"
+wget -O se-addport "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-addport"
+wget -O se-cek "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-cek"
+wget -O se-del "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/se-del"
+wget -O add-se-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/add-se-panel.sh"
+wget -O trial-se-panel "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/trial-se-panel.sh"
+wget -O add-se-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/add-se-res.sh"
+wget -O trial-se-res "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/trial-se-res.sh"
 chmod +x se-add
 chmod +x se-delport
 chmod +x se-maxlogin
@@ -261,7 +274,7 @@ echo "@reboot root nohup /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --ma
 
 # remove unnecessary files
 cd /home/vps/public_html
-wget -O index.html "https://script.redssh.net/index.html"
+wget -O index.html "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/index.html"
 chmod +x index.html
 cd
 apt autoclean -y

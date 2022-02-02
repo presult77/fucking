@@ -8,7 +8,7 @@ read -p "Expired (hari): " masaaktif
 if [[ $Login = 'root' ]]; then
 exit 1
 fi
-domain=sg1-ssh.redssh.net
+domain=$(cat /root/domainssh)
 ssl=443
 sqd="8080, 8000, 3128"
 random=`</dev/urandom tr -dc X-Z0-9 | head -c4`

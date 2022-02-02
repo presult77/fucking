@@ -122,7 +122,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://script.redssh.net/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/presult77/fucking/main/tipe2/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -138,13 +138,13 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://script.redssh.net/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/add-ssr-panel https://script.redssh.net/add-ssr-panel.sh && chmod +x /usr/bin/add-ssr-panel
-wget -O /usr/bin/trial-ssr-panel https://script.redssh.net/trial-ssr-panel.sh && chmod +x /usr/bin/trial-ssr-panel
-wget -O /usr/bin/add-ssr-res https://script.redssh.net/add-ssr-res.sh && chmod +x /usr/bin/add-ssr-res
-wget -O /usr/bin/trial-ssr-res https://script.redssh.net/trial-ssr-res.sh && chmod +x /usr/bin/trial-ssr-res
-wget -O /usr/bin/del-ssr-panel https://script.redssh.net/del-ssr-panel.sh && chmod +x /usr/bin/del-ssr-panel
-wget -O /usr/bin/del-ssr https://script.redssh.net/del-ssr.sh && chmod +x /usr/bin/del-ssr
-wget -O /usr/bin/renew-ssr-panel https://script.redssh.net/renew-ssr-panel.sh && chmod +x /usr/bin/renew-ssr-panel
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/presult77/fucking/main/tipe2/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/add-ssr-panel https://raw.githubusercontent.com/presult77/fucking/main/tipe2/add-ssr-panel.sh && chmod +x /usr/bin/add-ssr-panel
+wget -O /usr/bin/trial-ssr-panel https://raw.githubusercontent.com/presult77/fucking/main/tipe2/trial-ssr-panel.sh && chmod +x /usr/bin/trial-ssr-panel
+wget -O /usr/bin/add-ssr-res https://raw.githubusercontent.com/presult77/fucking/main/tipe2/add-ssr-res.sh && chmod +x /usr/bin/add-ssr-res
+wget -O /usr/bin/trial-ssr-res https://raw.githubusercontent.com/presult77/fucking/main/tipe2/trial-ssr-res.sh && chmod +x /usr/bin/trial-ssr-res
+wget -O /usr/bin/del-ssr-panel https://raw.githubusercontent.com/presult77/fucking/main/tipe2/del-ssr-panel.sh && chmod +x /usr/bin/del-ssr-panel
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/presult77/fucking/main/tipe2/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/renew-ssr-panel https://raw.githubusercontent.com/presult77/fucking/main/tipe2/renew-ssr-panel.sh && chmod +x /usr/bin/renew-ssr-panel
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh

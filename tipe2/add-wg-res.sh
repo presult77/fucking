@@ -2,7 +2,7 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-domain=sg1-wg.fastvpn.host
+domain=$(cat /root/domainwgres)
 clear
 # Load params
 source /etc/wireguard/params

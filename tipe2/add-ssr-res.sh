@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-domain=sg1-ssr.fastvpn.host
+domain=$(cat /root/domainssrres)
 IP=$(wget -qO- icanhazip.com);
 read -e -p "(Default: ):" ssr_user
 CLIENT_EXISTS=$(grep -w $ssr_user /usr/local/shadowsocksr/akun.conf | wc -l)
