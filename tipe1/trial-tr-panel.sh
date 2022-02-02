@@ -24,7 +24,7 @@ clear
 echo -e "This is Your TROJAN Trial Account Detail:"
 echo -e ""
 echo -e "Host/IP        : ${domain}"
-echo -e "Port           : 443, 80"
+echo -e "Port           : ${tr}"
 echo -e "Password       : ${user}"
 echo -e "================================="
 echo -e "Trojan Link    : ${trojanlink}"
