@@ -7,7 +7,7 @@ read -p "Username : " Login
 if [[ $Login = 'root' ]]; then
 exit 1
 fi
-domain=sg1-ssh.fastvpn.host
+domain=$(cat /root/domainsshres)
 masaaktif=1
 ssl=443
 sqd="8080, 8000, 3128"

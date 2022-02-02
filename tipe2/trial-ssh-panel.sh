@@ -7,7 +7,7 @@ read -p "Username : " Login
 if [[ $Login = 'root' ]]; then
 exit 1
 fi
-domain=sg1-ssh.redssh.net
+domain=$(cat /root/domainssh)
 masaaktif=1
 ssl=443
 sqd="8080, 8000, 3128"

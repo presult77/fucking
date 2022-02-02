@@ -2,7 +2,7 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-domain=sg1-wg.fastvpn.host
+domain=$(cat /root/domainwgres)
 masaaktif=1
 clear
 # Load params
@@ -67,7 +67,7 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 echo -e "This is Your WIREGUARD Trial Account Detail:"
 echo -e ""
 echo -e "Hostname       : $domain"
-echo -e "Port	        : 443, 80"
+echo -e "Port	        : 7070"
 echo -e "Username       : $CLIENT_NAME"
 echo -e "Config         : http://$SERVER_PUB_IP:81/$CLIENT_NAME.conf"
 echo -e ""

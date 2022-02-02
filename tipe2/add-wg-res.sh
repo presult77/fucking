@@ -52,7 +52,7 @@ DNS = $CLIENT_DNS_1,$CLIENT_DNS_2
 [Peer]
 PublicKey = $SERVER_PUB_KEY
 PresharedKey = $CLIENT_PRE_SHARED_KEY
-Endpoint = $domain:443
+Endpoint = $domain:7070
 AllowedIPs = 0.0.0.0/0,::/0" >>"$HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf"
 
 	# Add the client as a peer to the server
@@ -67,7 +67,7 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 echo -e "This is Your WIREGUARD Account Detail:"
 echo -e ""
 echo -e "Hostname       : $domain"
-echo -e "Port	        : 443, 80"
+echo -e "Port	        : 7070"
 echo -e "Username       : $CLIENT_NAME"
 echo -e "Active Days    : $masaaktif Days"
 echo -e "Expired On     : $exp"
