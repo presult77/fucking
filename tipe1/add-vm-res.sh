@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-domain=sg1-vm.fastvpn.host
+domain=$(cat /root/domainres)
 tls=443
 none=80
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do

@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
 uuid=$(cat /etc/trojan/uuid.txt)
-domain=sg1-tr.fastvpn.host
+domain=$(cat /root/domainres)
 tr=443
 masaaktif=1
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do

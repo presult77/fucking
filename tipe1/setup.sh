@@ -1,5 +1,10 @@
 #!/bin/bash
+read -p "Set The Hostname: " -e host
+hostnamectl set-hostname "$host"
 domain=$(hostname)
+read -p "Set The Reseller Hostname: " -e hostres
+echo $hostres > /root/domainres
+
 # go to root
 cd
 echo 1 > /proc/sys/net/ipv4/ip_forward
